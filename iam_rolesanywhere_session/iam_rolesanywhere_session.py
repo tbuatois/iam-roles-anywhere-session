@@ -313,11 +313,8 @@ class IAMRolesAnywhereSigner(SigV4Auth):
         if isinstance(certificate_chain, bytes):
             return x509.load_pem_x509_certificates(certificate_chain)
 
-        cert_chain_pem_file = open(certificate_chain, "rb")
-        _certs = x509.load_pem_x509_certificates(cert_chain_pem_file.read())
-        cert_chain_pem_file.close()
-
-        return _certs
+        with open(certificate_chain, "rb") as cert_chain_pem_file:
+            return x509.load_pem_x509_certificates(cert_chain_pem_file.read())
 
     @staticmethod
     def __load_certificate(certificate: Union[str, bytes]) -> x509.Certificate:
@@ -331,10 +328,11 @@ class IAMRolesAnywhereSigner(SigV4Auth):
         """
         if isinstance(certificate, bytes):
             return x509.load_pem_x509_certificate(certificate, default_backend())
-        cert_pem_file = open(certificate, "rb")
-        _ = x509.load_pem_x509_certificate(cert_pem_file.read(), default_backend())
-        cert_pem_file.close()
-        return _
+
+        with open(certificate, "rb") as cert_pem_file:
+            return x509.load_pem_x509_certificate(
+                cert_pem_file.read(), default_backend()
+            )
 
     @staticmethod
     def __load_private_key(
@@ -352,12 +350,10 @@ class IAMRolesAnywhereSigner(SigV4Auth):
             return crypto.load_privatekey(
                 crypto.FILETYPE_PEM, private_key, passphrase=passphrase
             )
-        key_pem_file = open(private_key, "rb")
-        _ = crypto.load_privatekey(
-            crypto.FILETYPE_PEM, key_pem_file.read(), passphrase=passphrase
-        )
-        key_pem_file.close()
-        return _
+        with open(private_key, "rb") as private_key:
+            return crypto.load_privatekey(
+                crypto.FILETYPE_PEM, private_key.read(), passphrase=passphrase
+            )
 
     def __get_privatekey_type(self) -> str:
         """Get the private key type and raise an error for unsupported type
