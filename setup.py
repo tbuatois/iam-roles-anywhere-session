@@ -14,7 +14,7 @@
   limitations under the License.
 """
 from pathlib import Path
-
+from iam_rolesanywhere_session import __version__
 from setuptools import setup
 
 this_directory = Path(__file__).parent
@@ -23,7 +23,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="iam_rolesanywhere_session",
-    version="1.0.0",
+    version=__version__,
     author="Thomas Buatois",
     author_email="tbuatois@amazon.fr",
     packages=["iam_rolesanywhere_session"],
