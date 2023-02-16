@@ -34,7 +34,6 @@ setup(
     long_description_content_type="text/markdown",
     python_requires=">=3.8",
     install_requires=[
-        "requests>=2.28.1",
         "pyOpenSSL>=22.0.0",
         "boto3>=1.24.55",
         "botocore>=1.27.55",

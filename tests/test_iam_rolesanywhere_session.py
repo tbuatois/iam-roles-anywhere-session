@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives import hashes, serialization
 from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.x509.oid import NameOID
 
-from iam_rolesanywhere_session import IAMRolesAnywhereSession
+from iam_rolesanywhere_session import IAMRolesAnywhereSession, IAMRolesAnywhereSigner
 
 
 def generate_private_key(size: int = 2048):
@@ -131,3 +131,27 @@ def get_sample_session() -> IAMRolesAnywhereSession:
         private_key=private_bytes,
         region="eu-central-1",
     )
+
+
+def test_create_signer():
+    signer = IAMRolesAnywhereSigner(
+        certificate=public_bytes,
+        private_key=private_bytes,
+        certificate_chain=None,
+        private_key_passphrase=None,
+        region="eu-central-1",
+        service_name="rolesanywhere",
+    )
+    assert isinstance(signer, IAMRolesAnywhereSigner)
+
+
+def test_algorithm():
+    signer = IAMRolesAnywhereSigner(
+        certificate=public_bytes,
+        private_key=private_bytes,
+        certificate_chain=None,
+        private_key_passphrase=None,
+        region="eu-central-1",
+        service_name="rolesanywhere",
+    )
+    assert signer.algorithm == "AWS4-X509-RSA-SHA256"
