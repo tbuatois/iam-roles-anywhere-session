@@ -12,7 +12,7 @@ from iam_rolesanywhere_session import IAMRolesAnywhereSession
 roles_anywhere_session = IAMRolesAnywhereSession(
     profile_arn="arn:aws:rolesanywhere:eu-central-1:************:profile/a6294488-77cf-4d4a-8c5c-40b96690bbf0",
     role_arn="arn:aws:iam::************:role/IAMRolesAnywhere-01",
-    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539,
+    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539",
     certificate='certificate.pem',
     private_key='privkey.pem',
     region="eu-central-1"
@@ -31,7 +31,7 @@ from iam_rolesanywhere_session import IAMRolesAnywhereSession
 roles_anywhere_session = IAMRolesAnywhereSession(
     profile_arn="arn:aws:rolesanywhere:eu-central-1:************:profile/a6294488-77cf-4d4a-8c5c-40b96690bbf0",
     role_arn="arn:aws:iam::************:role/IAMRolesAnywhere-01",
-    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539,
+    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539",
     certificate='certificate.pem',
     private_key='privkey.pem',
     region="eu-central-1"
@@ -50,7 +50,7 @@ from iam_rolesanywhere_session import IAMRolesAnywhereSession
 roles_anywhere_session = IAMRolesAnywhereSession(
     profile_arn="arn:aws:rolesanywhere:eu-central-1:************:profile/a6294488-77cf-4d4a-8c5c-40b96690bbf0",
     role_arn="arn:aws:iam::************:role/IAMRolesAnywhere-01",
-    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539,
+    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539",
     certificate='certificate.pem',
     private_key='privkey.pem',
     private_key_passphrase = "my_secured_passphrase",
@@ -69,7 +69,7 @@ from iam_rolesanywhere_session import IAMRolesAnywhereSession
 roles_anywhere_session = IAMRolesAnywhereSession(
     profile_arn="arn:aws:rolesanywhere:eu-central-1:************:profile/a6294488-77cf-4d4a-8c5c-40b96690bbf0",
     role_arn="arn:aws:iam::************:role/IAMRolesAnywhere-01",
-    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539,
+    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539",
     certificate='certificate.pem',
     certificate_chain='my_cert_cahin.pem',
     private_key='privkey.pem',
@@ -90,7 +90,7 @@ from iam_rolesanywhere_session import IAMRolesAnywhereSession
 creds = IAMRolesAnywhereSession(
     profile_arn="arn:aws:rolesanywhere:eu-central-1:************:profile/a6294488-77cf-4d4a-8c5c-40b96690bbf0",
     role_arn="arn:aws:iam::************:role/IAMRolesAnywhere-01",
-    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539,
+    trust_anchor_arn="arn:aws:rolesanywhere:eu-central-1::************::trust-anchor/4579702c-9abb-47c2-88b2-c734e0b29539",
     certificate='certificate.pem',
     certificate_chain='my_cert_cahin.pem',
     private_key='privkey.pem',
