@@ -1,6 +1,6 @@
 # Repository
-repo_name: 'tbuatois/iam-roles-anywhere-session'
-repo_url: 'https://github.com/tbuatois/iam-roles-anywhere-session'
+repo_name: 'awslabs/iam-roles-anywhere-session'
+repo_url: 'https://github.com/awslabs/iam-roles-anywhere-session'
 
 site_name: IAM Roles Anywhere Session
 theme:

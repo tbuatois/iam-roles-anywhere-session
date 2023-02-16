@@ -73,7 +73,7 @@ print(s3.list_buckets())
 
 # Documentation
 
-You can find [here](https://tbuatois.github.io/iam-rolesanywhere-session/) the complete documentation with additional usage and module reference.
+You can find [here](https://awslabs.github.io/iam-rolesanywhere-session/) the complete documentation with additional usage and module reference.
 
 ## Contributing
 
