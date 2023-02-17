@@ -14,7 +14,6 @@
   limitations under the License.
 """
 
-#!/bin/env python3
 import base64
 import hashlib
 import json
@@ -47,6 +46,8 @@ class IAMCredentials(TypedDict):
 
 
 class IAMRolesAnywhereSession:
+    """A class to create boto3 session from IAM Roles Anywhere"""
+
     def __init__(
         self,
         profile_arn: str,
@@ -173,6 +174,8 @@ class IAMRolesAnywhereSession:
 
 
 class IAMRolesAnywhereSigner(SigV4Auth):
+    """Class to sign request for Roles Anywhere endpoint"""
+
     def __init__(
         self,
         certificate: Union[str, bytes],
