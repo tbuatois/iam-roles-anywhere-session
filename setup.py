@@ -23,7 +23,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="iam_rolesanywhere_session",
-    version=__version__,
+    version=__version__.__version__,
     author="Thomas Buatois",
     author_email="tbuatois@amazon.fr",
     packages=["iam_rolesanywhere_session"],
