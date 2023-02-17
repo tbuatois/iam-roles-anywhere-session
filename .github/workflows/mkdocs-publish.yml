@@ -34,10 +34,7 @@ jobs:
           python-version: '3.9'
 
       - name: Install package
-        run: python3 -m pip install ./
-
-      - name: Install MkDocs and Material for MkDocs
-        run: pip install -r requirements-dev.txt
+        run: python3 -m pip install .[dev]
 
       - name: Setup caching
         uses: actions/cache@v3
